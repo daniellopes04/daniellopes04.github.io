@@ -1,3 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400&family=Scope+One&display=swap');
+
+$font-stack: 'Charis SIL', serif;
+$primary-color: #0D1B2A;
+$secondary-color: #415A77;
+$hover-color: #778DA9;
+$faded-color: #1B263B;
+$small-font-size: .875rem;
+$medium-font-size: 1rem;
+$big-font-size: 1.5rem;
+$font-medium: 500;
+$font-bold: 700;
+
+:root {
+    --body-bg: #FFFFFF;
+    --body-color: #000000;
+ }
+ 
+ /* Dark mode */
+ @media (prefers-color-scheme: dark) {
+    :root {
+        --body-bg: #000000;
+        --body-color: #FFFFFF;
+    }
+ }
+
+.center {
+    margin: auto;
+    width: 60%;
+    text-align: center;
+}
+
+.lateral {
+    width: 100%;
+    text-align: right;
+}
+
+.profile-picture {
+    max-width: 10rem;
+    border-radius: 50%;
+    margin-top: 1rem;
+}
+
 .current {
-    color: green;
+    color: $secondary-color;
+}
+
+body * {
+    font-family: $font-stack;
+}
+
+p {
+    font-family: $font-stack;
+}
+
+h1 {
+    font-family: $font-stack;
+    font-weight: $font-bold;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-weight: $font-medium;
+    color: $secondary-color;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $primary-color;
+    font-weight: $font-medium;
+}
+
+a:hover {
+    color: $hover-color;
+}
+
+nav {
+    font-size: 1.5rem;
+    
+    a {
+        margin-right: 1rem;
+    }
+}
+
+.social-links {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.link {
+    padding: 0.2rem;
+}
+
+.link-image {
+    width: 1.5rem;
+    aspect-ratio: 1/1;
+}
+
+.link-image:hover {
+    fill: $secondary-color;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 3rem;
+
+    .copyright {
+        font-size: $small-font-size;
+        color: $faded-color;
+        line-height: 1rem;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+    -o-animation: fadeIn 1s;
+    -ms-animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }

@@ -1,7 +1,13 @@
-<nav>
+<nav 
+    {% if page.url == '/' %} 
+        class="center"
+    {% else %}
+        class="lateral"
+    {% endif %}
+>
     {% for item in site.data.navigation %}
         <a href="{{ item.link }}" {% if page.url == item.link %} class="current"{% endif %}>
             {{ item.name }}
         </a>
     {% endfor %}
-  </nav>
+</nav>
