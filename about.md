@@ -3,7 +3,6 @@ title: About
 permalink: /about
 ---
 # About me
-## Daniel de Sousa
 
 Hello, world! My name is Daniel de Sousa and I'm a software developer who likes to think of himself as a game developer on free time.
 

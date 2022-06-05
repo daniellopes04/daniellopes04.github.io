@@ -62,9 +62,10 @@ html {
     color: var(--color-secondary);
 }
 
-body * {
+body {
     font-family: $font-stack;
     color: var(--color-primary);
+    font-size: 1.1rem;
 }
 
 .content {
@@ -125,17 +126,14 @@ ul {
 }
 
 .link {
-    padding: 0.2rem;
-}
-
-.link-image {
-    width: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
     aspect-ratio: 1/1;
-    fill: var(--color-primary);
-}
+    color: var(--color-primary);
 
-.link-image:hover {
-    fill: var(--color-hover);
+    i:hover {
+        color: var(--color-hover);
+    }
 }
 
 .footer {
@@ -185,11 +183,13 @@ ul {
 
 .line {
     width: 30%;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
 }
 
 .light-dark-icon {
     font-size: $big-font-size;
-    fill: var(--color-primary);
+    color: var(--color-primary);
 }
 
 .hidden {
@@ -205,6 +205,23 @@ ul {
     cursor: pointer;
 
     .light-dark-icon {
-        fill: var(--color-secondary);
+        color: var(--color-secondary);
+    }
+}
+
+.post-content {
+    text-align: justify;
+    text-indent: 3rem;
+    pre {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        font-size: .85rem;
+
+        // adding wrap capability to pre tag
+        white-space: pre-wrap;       /* css-3 */
+        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+        white-space: -pre-wrap;      /* Opera 4-6 */
+        white-space: -o-pre-wrap;    /* Opera 7 */
+        word-wrap: break-word;       /* Internet Explorer 5.5+ */
     }
 }

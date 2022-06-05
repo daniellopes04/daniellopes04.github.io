@@ -15,11 +15,21 @@
       {% include navigation.html %}
     {% endif %}
 
-    {% include header.html %}
+    {% unless page.url contains 'posts' %}
+      {% include header.html %}
+      <hr class="line">
+    {% endunless %}
 
-    <div class="content">
-      {{ content }}
-    </div>
+
+    {% if page.url == '/about' %} 
+      <div class="content center">
+        {{ content }}
+      </div> 
+    {% else %}
+      <div class="content">
+        {{ content }}
+      </div>
+    {% endif %}
     
     {% include footer.html %}
   </body>
