@@ -103,7 +103,7 @@ a:hover {
 }
 
 nav {
-    font-size: 1.5rem;
+    font-size: $big-font-size;
     
     a {
         margin-right: 1rem;
@@ -188,7 +188,7 @@ ul {
 }
 
 .light-dark-icon {
-    width: 1.2rem;
+    font-size: $big-font-size;
     fill: var(--color-primary);
 }
 
