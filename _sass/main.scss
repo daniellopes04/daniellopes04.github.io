@@ -1,28 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400&family=Scope+One&display=swap');
 
 $font-stack: 'Charis SIL', serif;
-$primary-color: #0D1B2A;
-$secondary-color: #415A77;
-$hover-color: #778DA9;
-$faded-color: #1B263B;
+$smaller-font-size: 0.5rem;
 $small-font-size: .875rem;
 $medium-font-size: 1rem;
 $big-font-size: 1.5rem;
 $font-medium: 500;
 $font-bold: 700;
 
-:root {
-    --body-bg: #FFFFFF;
-    --body-color: #000000;
- }
- 
- /* Dark mode */
- @media (prefers-color-scheme: dark) {
-    :root {
-        --body-bg: #000000;
-        --body-color: #FFFFFF;
-    }
- }
+$background-color: #fdfdfd;
+$background-color-dark: #222222;
+$primary-color: #222222;
+$primary-color-dark: #DEE4E7;
+$secondary-color: #415A77;
+$secondary-color-dark: #778DA9;
+$hover-color: #778DA9;
+$hover-color-dark: #415A77;
+$faded-color: #37474F;
+$faded-color-dark: #DEE4E7;
+
+[data-theme='light'] {
+    --color-background: #{$background-color};
+    --color-text: #{$primary-color};
+    --color-primary: #{$primary-color};
+    --color-secondary: #{$secondary-color};
+    --color-hover: #{$hover-color};
+    --color-faded: #{$faded-color};
+}
+
+[data-theme='dark'] {
+    --color-background: #{$background-color-dark};
+    --color-text: #{$primary-color-dark};
+    --color-primary: #{$primary-color-dark};
+    --color-secondary: #{$secondary-color-dark};
+    --color-hover: #{$hover-color-dark};
+    --color-faded: #{$faded-color-dark};
+}
+
+html {
+    background-color: var(--color-background);
+}
 
 .center {
     margin: auto;
@@ -42,11 +59,19 @@ $font-bold: 700;
 }
 
 .current {
-    color: $secondary-color;
+    color: var(--color-secondary);
 }
 
 body * {
     font-family: $font-stack;
+    color: var(--color-primary);
+}
+
+.content {
+    margin: auto;
+    width: 60%;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 p {
@@ -62,19 +87,19 @@ h1 {
 
 h2 {
     font-weight: $font-medium;
-    color: $secondary-color;
+    color: var(--color-secondary);
     margin-top: 0;
     margin-bottom: 0;
 }
 
 a {
     text-decoration: none;
-    color: $primary-color;
+    color: var(--color-primary);
     font-weight: $font-medium;
 }
 
 a:hover {
-    color: $hover-color;
+    color: var(--color-hover);
 }
 
 nav {
@@ -82,6 +107,15 @@ nav {
     
     a {
         margin-right: 1rem;
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+
+    a {
+        color: var(--color-secondary);
     }
 }
 
@@ -97,10 +131,11 @@ nav {
 .link-image {
     width: 1.5rem;
     aspect-ratio: 1/1;
+    fill: var(--color-primary);
 }
 
 .link-image:hover {
-    fill: $secondary-color;
+    fill: var(--color-hover);
 }
 
 .footer {
@@ -110,7 +145,7 @@ nav {
 
     .copyright {
         font-size: $small-font-size;
-        color: $faded-color;
+        color: var(--color-faded);
         line-height: 1rem;
     }
 }
@@ -146,4 +181,30 @@ nav {
 @-ms-keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+.line {
+    width: 30%;
+}
+
+.light-dark-icon {
+    width: 1.2rem;
+    fill: var(--color-primary);
+}
+
+.hidden {
+    display: none;
+}
+
+.light-dark-switch {
+    border: none;
+    background: none;
+}
+
+.light-dark-switch:hover {
+    cursor: pointer;
+
+    .light-dark-icon {
+        fill: var(--color-secondary);
+    }
 }
