@@ -282,6 +282,29 @@ a img:hover {
     border: 2px solid var(--color-secondary);
 }
 
+#scroll-up-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--color-secondary);
+    cursor: pointer;
+    padding: $small-font-size;
+    border-radius: 10px;
+    font-size: $small-font-size;
+}
+  
+#scroll-up-button:hover {
+    background-color: var(--color-primary); 
+
+    i {
+        color: var(--color-background)
+    }
+}
+
 @media screen and (max-width: 1366px) {
     .content {
         width: 60%;

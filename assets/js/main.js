@@ -1,5 +1,6 @@
-window.onload = function(){
+window.onload = function() {
     var selectedTheme = localStorage.getItem('selected-theme')
+
     const themeButton = document.getElementsByClassName('light-dark-switch');
     const themeButtonSelected = document.getElementsByClassName('light-dark-switch selected')[0]
     const themeButtonHidden = document.getElementsByClassName('light-dark-switch hidden')[0]
@@ -18,6 +19,7 @@ window.onload = function(){
             themeButtonLight.classList.add('hidden')
             themeButtonLight.classList.remove('selected')
         }
+
         document.documentElement.setAttribute('data-theme', selectedTheme)
     }
     
@@ -26,10 +28,10 @@ window.onload = function(){
         button.addEventListener('click', () => {
             if (button === themeButtonDark) {
                 document.documentElement.setAttribute('data-theme', 'dark');
-                localStorage.setItem('selected-theme', 'dark');
+                localStorage.setItem('selected-theme', 'dark')
             } else {
                 document.documentElement.setAttribute('data-theme', 'light');
-                localStorage.setItem('selected-theme', 'light');
+                localStorage.setItem('selected-theme', 'light')
             }
         
             themeButtonSelected.classList.toggle('selected')
@@ -39,4 +41,25 @@ window.onload = function(){
             
         })
     }
+
+    document.getElementById('scroll-up-button').addEventListener('click', scrollToTop)
+}
+
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById('scroll-up-button').style.display = 'block'
+    } else {
+        document.getElementById('scroll-up-button').style.display = 'none'
+    }
+};
+
+function scrollToTop() {
+    // For Safari
+    // document.body.scrollTop = 0
+
+    // For Chrome, Firefox, IE and Opera
+    document.documentElement.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    }) 
 }
