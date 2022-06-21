@@ -3,23 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <title>{{ page.title }}</title>
+    <title>Daniel de Sousa - {{ page.title }}</title>
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script src="/assets/js/main.js"></script>
     <script src="https://kit.fontawesome.com/aa4d2cb7d4.js" crossorigin="anonymous"></script>
     {% feed_meta %}
     {% seo %}
   </head>
-  <body>
+  <body {% if page.url != '/' %} class="body-container" {% endif %}>
     {% if page.url != '/' %}
       {% include navigation.html %}
     {% endif %}
 
-    {% unless page.url contains 'posts' %}
-      {% include header.html %}
-      <hr class="line">
-    {% endunless %}
-
+    {% include header.html %}
 
     {% if page.url == '/about' %} 
       <div class="content center">

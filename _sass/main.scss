@@ -2,9 +2,13 @@
 
 $font-stack: 'Charis SIL', serif;
 $smaller-font-size: 0.5rem;
-$small-font-size: .875rem;
+$small-font-size: .85rem;
 $medium-font-size: 1rem;
-$big-font-size: 1.5rem;
+$big-font-size: 1.25rem;
+$bigger-font-size: 1.5rem;
+$big-spacing: 2rem;
+$bigger-spacing: 3rem;
+$profile-picture-size: 10rem;
 $font-medium: 500;
 $font-bold: 700;
 
@@ -53,9 +57,9 @@ html {
 }
 
 .profile-picture {
-    max-width: 10rem;
+    max-width: $profile-picture-size;
     border-radius: 50%;
-    margin-top: 1rem;
+    margin-top: $medium-font-size;
 }
 
 .current {
@@ -65,14 +69,20 @@ html {
 body {
     font-family: $font-stack;
     color: var(--color-primary);
-    font-size: 1.1rem;
+    font-size: $medium-font-size;
+    height: 100vh;
+}
+
+.body-container {
+    display: flex;
+    flex-direction: column;
 }
 
 .content {
     margin: auto;
     width: 60%;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: $big-spacing;
+    padding-right: $big-spacing;
 }
 
 p {
@@ -84,6 +94,7 @@ h1 {
     font-weight: $font-bold;
     margin-top: 0;
     margin-bottom: 0;
+    font-size: $bigger-font-size;
 }
 
 h2 {
@@ -91,6 +102,7 @@ h2 {
     color: var(--color-secondary);
     margin-top: 0;
     margin-bottom: 0;
+    font-size: $big-font-size;
 }
 
 a {
@@ -105,9 +117,10 @@ a:hover {
 
 nav {
     font-size: $big-font-size;
+    margin-top: $smaller-font-size;
     
     a {
-        margin-right: 1rem;
+        margin-right: $medium-font-size;
     }
 }
 
@@ -121,13 +134,12 @@ ul {
 }
 
 .social-links {
-    margin-top: 1rem;
-    margin-bottom: 3rem;
+    margin-top: $medium-font-size;
 }
 
 .link {
-    padding: 0.5rem;
-    font-size: 1.5rem;
+    padding: $smaller-font-size;
+    font-size: $big-font-size;
     aspect-ratio: 1/1;
     color: var(--color-primary);
 
@@ -136,15 +148,20 @@ ul {
     }
 }
 
+.header {
+    width: 100%;
+    text-align: center;
+}
+
 .footer {
     width: 100%;
     text-align: center;
-    margin-top: 3rem;
+    margin-top: auto;
 
     .copyright {
         font-size: $small-font-size;
         color: var(--color-faded);
-        line-height: 1rem;
+        line-height: $medium-font-size;
     }
 }
 
@@ -182,9 +199,12 @@ ul {
 }
 
 .line {
+    height: 0px;
     width: 30%;
-    margin-top: 1.5rem;
-    margin-bottom: 2.5rem;
+    margin-top: $big-font-size;
+    margin-bottom: $small-font-size;
+    border: none;
+    border-top: 1px solid var(--color-primary);
 }
 
 .light-dark-icon {
@@ -199,6 +219,7 @@ ul {
 .light-dark-switch {
     border: none;
     background: none;
+    margin-right: $smaller-font-size;
 }
 
 .light-dark-switch:hover {
@@ -211,17 +232,18 @@ ul {
 
 .post-content {
     text-align: justify;
-    text-indent: 3rem;
-    pre {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-        font-size: .85rem;
+    text-indent: $bigger-spacing;
+}
 
-        // adding wrap capability to pre tag
-        white-space: pre-wrap;       /* css-3 */
-        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-        white-space: -pre-wrap;      /* Opera 4-6 */
-        white-space: -o-pre-wrap;    /* Opera 7 */
-        word-wrap: break-word;       /* Internet Explorer 5.5+ */
-    }
+pre {
+    padding-left: $big-font-size;
+    padding-right: $big-font-size;
+    font-size: $small-font-size;
+
+    // adding wrap capability to pre tag
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
