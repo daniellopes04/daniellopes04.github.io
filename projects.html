@@ -2,19 +2,20 @@
 title: Projects
 permalink: /projects
 ---
-<h1>Projects</h1>
+<h1 class="title text-center">Projects</h1>
 
 <p>
-    Some of my personal projects. You can access the live of the project when available by clicking on the cover image.
-</p>
-<p>
-    All the source codes are available at my github page.
+    Here are some of my personal projects. 
+    Be sure to check out my 
+    <a class="a-link" href="https://github.com/daniellopes04">github page</a> for all the source of all the projects listed below and more.
+    To see the live demo when available, just click on the cover image of the project.
 </p>
 
-<ul>
+<ul class="list">
     {% for project in site.projects %}
         <li>
-            <h2>{{ project.name }}</h2>
+            <h2 class="subtitle">{{ project.name }}</h2>
+
             {{ project.content }}
         </li>
     {% endfor %}

@@ -2,16 +2,30 @@
 title: About
 permalink: /about
 ---
-# About me
+# About
+{: .title .text-center}
 
 ```javascript
 
 console.log("Hello, World!");
 
 ```
+{: .text-center}
 
-Hi! My name is Daniel de Sousa and I'm a Software Engineer Intern, on his way to a Junior position. I like to cuddle my cats and develop games on my free time.
+## A little about me
 
-My interests include web development and development in general, besides books, music and writing poetry. 
+Hi! My name is Daniel de Sousa and I'm a Software Engineer Intern, on his way to a Junior position. My interests include web development and development in general, besides books, music and writing poetry. I also like to cuddle my cats and develop games on my free time.
 
-Some of the technologies that I've worked with are: Python, Quasar and Vue.js, Java with SpringBoot, Docker and more.
+## Experience
+
+Some of the technologies that I've worked with are: 
+
+- Javascript
+- Python (Flask)
+- Vue.js (Quasar Framework)
+- Java (SpringBoot)
+- PHP (Laravel)
+- C / C++
+- Ruby (Jekyll)
+- Lua (Love2D)
+- Unity

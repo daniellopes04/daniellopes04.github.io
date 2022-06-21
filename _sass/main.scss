@@ -51,6 +51,10 @@ html {
     text-align: center;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .lateral {
     width: 100%;
     text-align: right;
@@ -80,16 +84,20 @@ body {
 
 .content {
     margin: auto;
-    width: 60%;
+    width: 40%;
     padding-left: $big-spacing;
     padding-right: $big-spacing;
+}
+
+.content:not(.center) {
+    text-align: justify;
 }
 
 p {
     font-family: $font-stack;
 }
 
-h1 {
+.title {
     font-family: $font-stack;
     font-weight: $font-bold;
     margin-top: 0;
@@ -97,12 +105,18 @@ h1 {
     font-size: $bigger-font-size;
 }
 
-h2 {
+.subtitle {
     font-weight: $font-medium;
     color: var(--color-secondary);
     margin-top: 0;
     margin-bottom: 0;
     font-size: $big-font-size;
+}
+
+.home-title {
+    font-family: $font-stack;
+    font-size: $bigger-font-size;
+    margin-top: $bigger-spacing;
 }
 
 a {
@@ -115,6 +129,11 @@ a:hover {
     color: var(--color-hover);
 }
 
+h2 a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
 nav {
     font-size: $big-font-size;
     margin-top: $smaller-font-size;
@@ -124,7 +143,7 @@ nav {
     }
 }
 
-ul {
+.list {
     list-style-type: none;
     padding-left: 0;
 
@@ -146,6 +165,10 @@ ul {
     i:hover {
         color: var(--color-hover);
     }
+}
+
+.a-link {
+    text-decoration: underline;
 }
 
 .header {
@@ -249,9 +272,37 @@ pre {
 }
 
 img {
-    width: 80%;
+    width: 70%;
+    border-radius: 10px;
+    border: 2px solid transparent;
 }
 
 a img:hover {
-    opacity: 0.3;
+    opacity: 0.5;
+    border: 2px solid var(--color-secondary);
+}
+
+@media screen and (max-width: 1366px) {
+    .content {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 968px) {
+    .content {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .content {
+        width: 90%;
+        padding-left: $smaller-font-size;
+        padding-right: $smaller-font-size;
+        text-align: justify;
+    }
+
+    img {
+        width: 100%;
+    }
 }

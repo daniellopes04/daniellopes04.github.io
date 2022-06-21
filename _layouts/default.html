@@ -18,7 +18,13 @@
 
     {% include header.html %}
 
-    <div class="content center">
+    <div 
+      {% if page.url contains 'projects' %} 
+        class="fade-in content center" 
+      {% else %} 
+        class="fade-in content" 
+      {% endif %}
+    >
       {{ content }}
     </div> 
     

@@ -2,3 +2,12 @@
 title: Home
 ---
 {% include navigation.html %}
+
+<h1 class="home-title text-center">Latest post</h1>
+
+<ul class="list">
+    <li>
+        <h2 class="subtitle"><a href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h2>
+        {{ site.posts.first.excerpt }}
+    </li>
+</ul>

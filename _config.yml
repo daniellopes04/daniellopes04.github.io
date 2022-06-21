@@ -1,6 +1,6 @@
 collections:
   posts:
-    permalink: /:collection/:name
+    permalink: /:collection/:title
   projects:
     output: true
     permalink: /:collection/:name
