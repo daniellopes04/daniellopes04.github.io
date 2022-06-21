@@ -10,6 +10,8 @@ console.log("Hello, World!");
 
 ```
 
-My name is Daniel de Sousa and I'm a software developer who likes to think of himself as a game developer on free time.
+Hi! My name is Daniel de Sousa and I'm a Software Engineer Intern, on his way to a Junior position. I like to cuddle my cats and develop games on my free time.
 
-I am interested in web development in general. Always interested in the learning process.
+My interests include web development and development in general, besides books, music and writing poetry. 
+
+Some of the technologies that I've worked with are: Python, Quasar and Vue.js, Java with SpringBoot, Docker and more.

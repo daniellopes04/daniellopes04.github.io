@@ -1,0 +1,21 @@
+---
+title: Projects
+permalink: /projects
+---
+<h1>Projects</h1>
+
+<p>
+    Some of my personal projects. You can access the live of the project when available by clicking on the cover image.
+</p>
+<p>
+    All the source codes are available at my github page.
+</p>
+
+<ul>
+    {% for project in site.projects %}
+        <li>
+            <h2>{{ project.name }}</h2>
+            {{ project.content }}
+        </li>
+    {% endfor %}
+</ul>

@@ -1,7 +1,7 @@
 collections:
   posts:
     permalink: /:collection/:name
-  authors:
+  projects:
     output: true
     permalink: /:collection/:name
 
@@ -13,9 +13,9 @@ plugins:
 defaults:
   - scope:
       path: ""
-      type: "authors"
+      type: "projects"
     values:
-      layout: "author"
+      layout: "project"
   - scope:
       path: ""
       type: "posts"

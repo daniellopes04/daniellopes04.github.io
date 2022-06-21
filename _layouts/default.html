@@ -18,15 +18,9 @@
 
     {% include header.html %}
 
-    {% if page.url == '/about' %} 
-      <div class="content center">
-        {{ content }}
-      </div> 
-    {% else %}
-      <div class="content">
-        {{ content }}
-      </div>
-    {% endif %}
+    <div class="content center">
+      {{ content }}
+    </div> 
     
     {% include footer.html %}
   </body>
