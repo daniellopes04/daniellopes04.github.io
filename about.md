@@ -14,12 +14,14 @@ console.log("Hello, World!");
 
 ## A little about me
 
-Hi! My name is Daniel de Sousa and I'm a Software Engineer Intern, on his way to a Junior position. My interests include web development and development in general, besides books, music and writing poetry. I also like to cuddle my cats and develop games on my free time.
+Hi! My name is Daniel de Sousa and I'm a Software Engineer. My interests include web and game development, besides books, music and writing poetry.
 
 ## Experience
 
 Some of the technologies that I've worked with are: 
 
+- React
+- .NET Core
 - Javascript
 - Python (Flask)
 - Vue.js (Quasar Framework)
